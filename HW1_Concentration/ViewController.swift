@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBAction func newGame() {
         game.newGame()
         emoji.removeAll()
@@ -48,6 +49,7 @@ class ViewController: UIViewController {
             }
         }
         flipCountLabel.text = "flip count: \(game.flipCount)"
+        scoreLabel.text = "Score: \(game.score)"
     }
     var emoji=[Int:String]()
     
@@ -64,9 +66,6 @@ lazy var emojiChoices = allThemes[Int(arc4random_uniform(UInt32(allThemes.count)
         themeGame(theme: "nature", emoji: ["⭐️", "⚡️", "❄️", "🌥", "☔️", "🌧", "💨"]),
         themeGame(theme: "computer", emoji: ["📲", "💽", "📞", "💾", "📷", "🎥", "💻"])]
         
- /*  func chooseTheme(){
-        indexTheme = Int(arc4random_uniform(UInt32(allThemes.count)))
-    }*/
     
     func emoji (for card: Card) -> String {
         if emoji[card.identifier] == nil , emojiChoices.count > 0 {

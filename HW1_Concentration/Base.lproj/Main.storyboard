@@ -170,7 +170,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4R-Hn-6R1">
-                                <rect key="frame" x="123" y="565" width="169" height="51"/>
+                                <rect key="frame" x="193" y="602" width="169" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -181,12 +181,20 @@
                                     <action selector="newGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="yAW-Qq-9ay"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez1-Dj-ej2">
+                                <rect key="frame" x="37" y="543" width="264" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="1" green="0.95005834389999999" blue="0.5856688028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="flipCountLabel" destination="xap-Pi-HRu" id="kjc-U9-Ldg"/>
+                        <outlet property="scoreLabel" destination="ez1-Dj-ej2" id="iAg-2e-Jq1"/>
                         <outletCollection property="cardButtons" destination="zBc-nc-neK" collectionClass="NSMutableArray" id="0dA-Et-QUo"/>
                         <outletCollection property="cardButtons" destination="ybo-c4-hpA" collectionClass="NSMutableArray" id="403-5Q-8WW"/>
                         <outletCollection property="cardButtons" destination="9JH-75-LhG" collectionClass="NSMutableArray" id="lMH-fe-cdn"/>
