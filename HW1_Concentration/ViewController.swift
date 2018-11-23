@@ -17,11 +17,6 @@ class ViewController: UIViewController {
     
     lazy var game = Concentration(numberOfCardPars: cardButtons.count/2)
     
-    var flipCount = 0 {
-        didSet {
-            flipCountLabel.text = "flip count: \(flipCount)"
-        }
-    }
     @IBOutlet weak var flipCountLabel: UILabel!
     var choiceEmoji: [String] = ["👁", "🗝", "🧸", "🧸", "👁", "🗝"]
     
@@ -30,7 +25,6 @@ class ViewController: UIViewController {
         if let cardNumber = cardButtons.index(of: sender) {
             game.chooseCard(at: cardNumber)
             updateViewFromModel()
-            flipCount += 1
         }
     }
     
@@ -46,6 +40,7 @@ class ViewController: UIViewController {
                 button.backgroundColor = card.isMatched ? #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 0) : #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
             }
         }
+        flipCountLabel.text = "flip count: \(game.flipCount)"
     }
     var emoji=[Int:String]()
     

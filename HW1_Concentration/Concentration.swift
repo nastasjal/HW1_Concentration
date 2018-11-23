@@ -12,6 +12,7 @@ class Concentration
 {
     var cards = [Card]()
     var indexOfoneAndOnlyOneFaceUpCard: Int?
+    var flipCount = 0
     
     func chooseCard(at index: Int) {
         if !cards[index].isMatched {
@@ -29,6 +30,7 @@ class Concentration
                 cards[index].isFaceUp = true
                 indexOfoneAndOnlyOneFaceUpCard = index
             }
+            flipCount += 1
         } else {
 
         }
@@ -40,6 +42,7 @@ class Concentration
             cards[index].isMatched = false
         }
         cards.shuffle()
+        flipCount = 0
     }
     
     init (numberOfCardPars: Int) {
