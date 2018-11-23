@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     }
     var emoji=[Int:String]()
     
-lazy var emojiChoices = allThemes[indexTheme].emoji
+lazy var emojiChoices = allThemes[Int(arc4random_uniform(UInt32(allThemes.count)))].emoji
     
     private struct themeGame{
         var theme: String
