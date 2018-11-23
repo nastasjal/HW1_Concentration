@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBAction func newGame() {
-        var game = Concentration(numberOfCardPars: cardButtons.count/2)
+        game.newGame()
         updateViewFromModel()
     }
     

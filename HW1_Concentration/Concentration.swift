@@ -34,17 +34,21 @@ class Concentration
         }
     }
     
+    func newGame() {
+        for index in cards.indices {
+            cards[index].isFaceUp = false
+            cards[index].isMatched = false
+        }
+        cards.shuffle()
+    }
+    
     init (numberOfCardPars: Int) {
         for _ in 0..<numberOfCardPars {
             let card = Card()
             cards += [card, card]
         }
         //MARK: shufle cards
-        for _ in 0..<numberOfCardPars {
-            let randomIndex = Int(arc4random_uniform(UInt32(numberOfCardPars * 2)))
-            let randomCard = cards.remove(at: randomIndex)
-            cards += [randomCard]
-        }
+        cards.shuffle()
     }
     
 }
