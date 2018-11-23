@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func newGame() {
+        var game = Concentration(numberOfCardPars: cardButtons.count/2)
+        updateViewFromModel()
+    }
+    
     lazy var game = Concentration(numberOfCardPars: cardButtons.count/2)
     
     var flipCount = 0 {
